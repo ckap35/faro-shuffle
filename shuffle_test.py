@@ -77,29 +77,3 @@ ax.grid(True)
 plt.show()
 
 
-
-
-
-
-
-########################################################
-# graphics output section
-##def ModelAndScatterPlot(graphWidth, graphHeight):
-##    f = plt.figure(figsize=(graphWidth/100.0, graphHeight/100.0), dpi=100)
-##    axes = f.add_subplot(111)
-##
-##    # first the raw data as a scatter plot
-##    #axes.plot(xData, yData,  'ro', label='Simulated results')
-##    plt.scatter(xData,yData,s=10,c=[1,0,1])
-##
-##    axes.set_xlabel('Number of cards in deck') # X axis data label
-##    axes.set_ylabel('Shuffles required') # Y axis data label
-##
-##    plt.legend()
-##    plt.show()
-##
-##    plt.close('all') # clean up after using pyplot
-##
-##graphWidth = 800
-##graphHeight = 600
-##ModelAndScatterPlot(graphWidth, graphHeight)
