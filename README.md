@@ -1,7 +1,6 @@
 # Faro shuffle periods
 
-How many perfect shuffles return a deck to its original order? This experiment
-counts the period for every even deck size from 2 through 998.
+Out-shuffle cycle lengths for even deck sizes from 2 through 998.
 
 The shuffle is an **out-shuffle**: split the deck into equal halves and
 alternate cards starting with the top half. The first and last cards stay
@@ -36,8 +35,8 @@ python shuffle_test.py --output results/shuffle_periods.png
 
 ![Out-shuffle periods for even deck sizes](docs/figures/shuffle_periods.png)
 
-Each point is an exact cycle count from repeated shuffling. The gray lines
-are `N/k` for `k = 1, …, 8`, included as visual guides.
+Each point gives the number of shuffles needed to restore the deck. Gray
+lines show `N/k` for `k = 1, …, 8`.
 
 ## Use the functions
 
@@ -55,8 +54,8 @@ The functions take lists with an even number of cards, at least two.
 For a deck of size `N > 2`, number the positions from zero. Apart from the
 fixed bottom card, an out-shuffle maps position `i` to `2i mod (N - 1)`.
 The period is therefore the smallest positive `k` with
-`2**k = 1 mod (N - 1)`. The code counts shuffles directly rather than using
-this formula. A two-card deck has period one.
+`2**k = 1 mod (N - 1)`. The script obtains each period by repeated shuffling.
+A two-card deck has period one.
 
 ## Checks
 
